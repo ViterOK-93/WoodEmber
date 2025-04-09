@@ -22,14 +22,14 @@
 #define BITFLAG_INVERT_LIMIT_PINS bit(0)
 
 typedef struct {
-  float steps_per_mm[N_AXIS];
-  float max_rate[N_AXIS];
-  float acceleration[N_AXIS];
-  float max_travel[N_AXIS];
-  uint8_t step_invert_mask;
-  uint8_t dir_invert_mask;
-  float junction_deviation;
-  uint8_t flags;
+    float steps_per_mm[N_AXIS];
+    float max_rate[N_AXIS];
+    float acceleration[N_AXIS];
+    float max_travel[N_AXIS];
+    uint8_t step_invert_mask;
+    uint8_t dir_invert_mask;
+    float junction_deviation;
+    uint8_t flags;
 } settings_t;
 extern settings_t settings;
 

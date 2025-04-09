@@ -27,15 +27,15 @@
 #define STEP_CONTROL_UPDATE_SPINDLE_PWM   bit(3)
 
 typedef struct {
-  uint8_t state;
-  uint8_t last_state;
-  uint8_t state2;
-  uint8_t abort;
-  uint8_t suspend;
-  uint8_t step_control;
-  uint8_t f_override;
-  uint8_t spindle_speed;
-  uint8_t non_modal_dwell;
+    uint8_t state;
+    uint8_t last_state;
+    uint8_t state2;
+    uint8_t abort;
+    uint8_t suspend;
+    uint8_t step_control;
+    uint8_t f_override;
+    uint8_t spindle_speed;
+    uint8_t non_modal_dwell;
 } system_t;
 extern system_t sys;
 
@@ -49,8 +49,8 @@ extern int32_t wco[N_AXIS];
 extern volatile uint8_t sys_rt_exec_state;
 
 #ifdef COREXY
-  int32_t system_convert_corexy_to_x_axis_steps(int32_t *steps);
-  int32_t system_convert_corexy_to_y_axis_steps(int32_t *steps);
+int32_t system_convert_corexy_to_x_axis_steps(int32_t *steps);
+int32_t system_convert_corexy_to_y_axis_steps(int32_t *steps);
 #endif
 
 void system_init();

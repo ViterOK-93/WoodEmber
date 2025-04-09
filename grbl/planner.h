@@ -9,28 +9,28 @@
 #define PL_COND_FLAG_RAPID_MOTION      bit(0)
 
 typedef struct {
-  uint32_t steps[N_AXIS];
-  uint32_t step_event_count;
-  uint8_t direction_bits;
-  uint8_t condition;
-  float entry_speed_sqr;
-  float max_entry_speed_sqr;
-  float acceleration;
-  float millimeters;
-  float max_junction_speed_sqr;
-  float rapid_rate;
-  float programmed_rate;
-  uint8_t spindle_speed;
+    uint32_t steps[N_AXIS];
+    uint32_t step_event_count;
+    uint8_t direction_bits;
+    uint8_t condition;
+    float entry_speed_sqr;
+    float max_entry_speed_sqr;
+    float acceleration;
+    float millimeters;
+    float max_junction_speed_sqr;
+    float rapid_rate;
+    float programmed_rate;
+    uint8_t spindle_speed;
 } plan_block_t;
 
 typedef struct {
-  int32_t xyz[N_AXIS];
-  float gc_pos[N_AXIS];
-  uint8_t spindle_speed;
-  float feed_rate;
-  uint8_t condition;
-  uint8_t units;
-  uint8_t distance;
+    int32_t xyz[N_AXIS];
+    float gc_pos[N_AXIS];
+    uint8_t spindle_speed;
+    float feed_rate;
+    uint8_t condition;
+    uint8_t units;
+    uint8_t distance;
 } plan_line_data_t;
 extern plan_line_data_t pl_data;
 

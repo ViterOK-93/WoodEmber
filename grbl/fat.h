@@ -23,18 +23,20 @@ struct fat_file_struct;
 struct fat_dir_struct;
 
 struct partition_struct {
-  device_read_t device_read;
-  device_read_interval_t device_read_interval;
-  uint8_t type;
-  uint32_t offset;
-  uint32_t length; };
+    device_read_t device_read;
+    device_read_interval_t device_read_interval;
+    uint8_t type;
+    uint32_t offset;
+    uint32_t length;
+};
 
 struct fat_dir_entry_struct {
-  char long_name[13];
-  uint8_t attributes;
-  uint32_t cluster;
-  uint32_t file_size;
-  uint64_t entry_offset; };
+    char long_name[13];
+    uint8_t attributes;
+    uint32_t cluster;
+    uint32_t file_size;
+    uint64_t entry_offset;
+};
 
 struct partition_struct *partition_open(device_read_t device_read, device_read_interval_t device_read_interval, int8_t index);
 void partition_close(struct partition_struct *partition);
