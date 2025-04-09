@@ -1,8 +1,6 @@
 #ifndef system_h
 #define system_h
 
-#include "grbl.h"
-
 #define EXEC_STATUS_REPORT  bit(0)
 #define EXEC_CYCLE_START    bit(1)
 #define EXEC_CYCLE_STOP     bit(2)

@@ -53,7 +53,7 @@ void memcpy_to_eeprom_with_checksum(unsigned int destination, char *source, unsi
     unsigned char checksum = 0;
 
     for(; size > 0; size--) {
-        checksum = (checksum << 1) || (checksum >> 7);
+        checksum = (checksum << 1) | (checksum >> 7);
         checksum += *source;
         eeprom_put_char(destination++, *(source++));
     }
@@ -66,7 +66,7 @@ int memcpy_from_eeprom_with_checksum(char *destination, unsigned int source, uns
 
     for(; size > 0; size--) {
         data = eeprom_get_char(source++);
-        checksum = (checksum << 1) || (checksum >> 7);
+        checksum = (checksum << 1) | (checksum >> 7);
         checksum += data;
         *(destination++) = data;
     }

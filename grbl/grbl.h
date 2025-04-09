@@ -9,6 +9,8 @@
 #include <avr/pgmspace.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+
+#include <stdlib.h>
 #include <math.h>
 #include <inttypes.h>
 #include <string.h>

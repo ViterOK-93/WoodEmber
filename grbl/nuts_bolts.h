@@ -17,11 +17,11 @@
 #define max(a,b) (((a) > (b)) ? (a) : (b))
 #define min(a,b) (((a) < (b)) ? (a) : (b))
 
-#define bit(n) (1 << n)
+#define bit(n) (1 << (n))
 #define bit_true(x,mask) (x) |= (mask)
 #define bit_false(x,mask) (x) &= ~(mask)
-#define bit_istrue(x,mask) (0 != (x & mask))
-#define bit_isfalse(x,mask) (0 == (x & mask))
+#define bit_istrue(x,mask) (0 != ((x) & (mask)))
+#define bit_isfalse(x,mask) (0 == ((x) & (mask)))
 
 uint8_t read_float(char *line, uint8_t *char_counter, float *float_ptr);
 void delay_ms(uint16_t ms);

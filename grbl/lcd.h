@@ -26,12 +26,19 @@
 
 #define lcd_puts_P(__s) lcd_puts_p(PSTR(__s))
 
-extern void lcd_init();
-extern void lcd_clrscr(void);
-extern void lcd_gotoxy(uint8_t x, uint8_t y);
-extern void lcd_putc(char c);
-extern void lcd_puts_p(const char *progmem_s);
-extern void lcd_command(uint8_t cmd);
-extern void lcd_data(uint8_t data);
+void lcd_init();
+void lcd_clrscr(void);
+void lcd_gotoxy(uint8_t x, uint8_t y);
+void lcd_putc(char c);
+void lcd_puts_p(const char *progmem_s);
+void lcd_command(uint8_t cmd);
+void lcd_data(uint8_t data);
+
+void lcd_position();
+void lcd_state();
+void lcd_state2();
+void lcd_clear();
+void lcd_file(const char *s);
+void lcd_error(uint8_t status_code);
 
 #endif
