@@ -42,7 +42,7 @@ uint8_t gc_execute_line(char *line) {
                         if (sys.abort) {
                             return(0);
                         }
-                        int_value = ceil(1.0 / (DWELL_TIME_STEP * 400));
+                        int_value = ceil(1.0 / DWELL_TIME_STEP * 400);
                         //spindle_set_speed(255);
                         while (int_value > 0) {
                         buttons_check();
@@ -61,7 +61,7 @@ uint8_t gc_execute_line(char *line) {
                         if (sys.abort) {
                             return(0);
                         }
-                        int_value = ceil(1.0 / (DWELL_TIME_STEP * 400));
+                        int_value = ceil(1.0 / DWELL_TIME_STEP * 400);
                         //spindle_set_speed(0);
                         while (int_value > 0) {
                         buttons_check();
